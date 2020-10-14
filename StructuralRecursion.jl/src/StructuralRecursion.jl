@@ -6,7 +6,7 @@ export KeyValuePair, LinkedList, prepend, append, buildlist, FenwickTree, buildF
 # Define a simple composite datatype to hold an (Int64, Float64) key-value pair
 mutable struct KeyValuePair
     key::Int64
-    value::Float64   
+    value::Float64
 end
 
 # Define list type
@@ -25,4 +25,5 @@ end
 # Include the files containing the code for various functions operating on these data types
 include(joinpath("functions", "LinkedList.jl"))
 include(joinpath("functions", "FenwickTree.jl"))
+include(joinpath("functions", "MyTools.jl"))
 end
