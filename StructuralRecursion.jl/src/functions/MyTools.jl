@@ -22,6 +22,23 @@ function search(list::LinkedList, k::Int64)
             return list.data
         end
     end
+
+    return Nothing()
+end
+
+function intervalmembership(list::LinkedList, x::Float64)
+    #As list is a LinkedList, I am assuming that it can't be of type Nothing
+    #check the current node first
+    if list.data.value > x
+        return list.data
+    end
+
+    while list.next != Nothing()
+        list = list.next
+        if list.data.value > x
+            return list.data
+        end
+    end
     
     return Nothing()
 end
